@@ -41,7 +41,14 @@ public class DataLoader {
         return loadedRows;
     }
 
-
+    public List<String> loadDataSecond(String path) {
+        try {
+            return Files.readAllLines(Path.of(path));
+        } catch (IOException e) {
+            e.printStackTrace();
+            return new ArrayList<>();
+        }
+    }
 
 }
 
